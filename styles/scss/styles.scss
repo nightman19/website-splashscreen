@@ -1,0 +1,61 @@
+//Base Styles
+@import "base/__base-dir";
+@import 'abstracts/__variables-dir';
+
+/*Main Style*/
+body{
+	font: 300% $font-stack;	
+}
+header{
+	position: relative;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 80px;
+
+	h4{
+		position: absolute;
+		left: 10%;
+		bottom: 1rem;
+		font-size: 1.6rem;	
+	}
+}
+
+/* SplashScree */
+.splash-intro{
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100vh;
+	background: #161616;
+	transition: 1s;
+
+	.splash-intro_logo{
+		position: absolute;
+		top: 47%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		color: #ffffff;
+
+		.splash-intro_logo-type{
+			position: relative;
+			display: inline-block;
+			bottom: -20px;
+			opacity: 0;
+			
+			&.active{
+				bottom: 0;
+				opacity: 1;
+				transition: ease-in-out 0.5s;
+			}
+
+			&.fade{
+				bottom: 150px;
+				opacity: 0;
+				transition: ease-in-out 0.5s;
+			}
+		}
+	}
+}
